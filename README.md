@@ -13,8 +13,19 @@ Max Backend Project is a Node.js application designed to manage artists and musi
 
 ### 1. Clone the Repository
 
+Using HTTPS:
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/silacode/max-backend-project.git
+```
+
+Using SSH:
+
+```bash
+git clone git@github.com:silacode/max-backend-project.git
+```
+
+```bash
 cd max-backend-project
 ```
 
