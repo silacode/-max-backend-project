@@ -1,0 +1,35 @@
+{
+  "name": "max-artists",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types",
+    "sql": "wrangler d1 execute db --local --command='SELECT * FROM artists'",
+    "db:seed": "wrangler d1 execute db --local --file=./src/db/seed.sql",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "wrangler d1 migrations apply db --local",
+    "setup": "yarn install && yarn cf-typegen",
+    "setup:db": "yarn db:generate && yarn db:migrate && yarn db:seed",
+    "setup:all": "yarn setup && yarn setup:db",
+    "dev:full": "sets up the database and starts the development server."
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.7.5",
+    "@cloudflare/workers-types": "^4.20250310.0",
+    "drizzle-kit": "^0.30.6",
+    "tsx": "^4.19.3",
+    "typescript": "^5.5.2",
+    "vitest": "~3.0.7",
+    "wrangler": "4"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.3",
+    "drizzle-orm": "^0.41.0",
+    "hono": "^4.7.4",
+    "zod": "^3.24.2"
+  }
+}
