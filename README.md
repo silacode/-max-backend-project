@@ -6,7 +6,7 @@ Max Backend Project is a Node.js application designed to manage artists and musi
 
 ## Prerequisites
 
-- Node.js (version 18 or later) ////////////////////////////////////
+- Node.js (version 18 or later)
 - Yarn package manager
 
 ## Quick Start
