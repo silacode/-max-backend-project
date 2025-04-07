@@ -48,7 +48,7 @@ export const releases = table("releases", {
   artist_id: t
     .text("artist_id")
     .notNull()
-    .references(() => artists.id),
+    .references(() => artists.id, { onDelete: "cascade" }), // delete releases when artist is deleted
   ...timestamps,
 });
 
