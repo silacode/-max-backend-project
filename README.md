@@ -2,7 +2,7 @@
 
 ## Overview
 
-Max Backend Project is a Node.js application designed to manage artists and music releases. It uses Hono.js for routing, Drizzle ORM for database interactions, and Zod for input validation.
+Max Backend Project is an application designed to manage artists and music releases. It uses Hono.js framework for backend, Drizzle ORM for database interactions, Zod for input validation, and cloudflare worker/D1 as serverless.
 
 ## Prerequisites
 
